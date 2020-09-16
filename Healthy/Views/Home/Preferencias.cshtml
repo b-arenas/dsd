@@ -1,0 +1,120 @@
+﻿@{
+    Layout = "~/Views/Home/_LayoutPrincipal.cshtml";
+}
+
+<script src="~/Content/js/Preferencias.js"></script>
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Mis Preferencias</h1>
+</div>
+
+<form class="col-xl-10 align-self-center">
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <h5 class="register-heading">Datos Personales</h5>
+            <div class="row register-form">
+                <div class="col-md-12">
+                    <div class="row mb-4">
+                        <div class="col-xl-6">
+                            <input id="iptNombres" type="text" class="form-control" placeholder="Nombres" value="" disabled />
+                        </div>
+                        <div class="col-xl-6">
+                            <input id="iptApellidos" type="text" class="form-control" placeholder="Apellidos" value="" disabled />
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-xl-6">
+                            <input id="iptCorreo" type="email" class="form-control" placeholder="Correo Electrónico" value="" disabled />
+                        </div>
+                        <div class="col-xl-6">
+                            <input id="iptTelefono" type="text" class="form-control" placeholder="Teléfono" value="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <h5 class="register-heading">Datos para la aplicación</h5>
+            <div class="row register-form">
+                <div class="col-md-12">
+                    <div class="row mb-4">
+                        <div class="col-xl-3">
+                            <input id="iptPeso" type="text" class="form-control" placeholder="Peso (kg)" value="" />
+                        </div>
+                        <div class="col-xl-3">
+                            <input id="iptTalla" type="text" class="form-control" placeholder="Talla (m)" value="" />
+                        </div>
+                        <div class="col-xl-3">
+                            <input id="iptEdad" type="text" class="form-control" placeholder="Edad" value="" />
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="maxl border-secondary">
+                                <label class="radio inline float-left ml-3">
+                                    <input type="radio" name="gender" value="1" checked>
+                                    <span>Masculino</span>
+                                </label>
+                                <label class="radio inline float-right mr-3">
+                                    <input type="radio" name="gender" value="2">
+                                    <span>Femenino</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row mb-4">
+                        <div class="col-xl-4">
+                            <select id="cboRegimen" class="form-control">
+                                <option value="0" class="hidden" selected disabled>Seleccione su regimen alimenticio</option>
+                                <option value="1">Sin restricciones</option>
+                                <option value="2">Vegetariano</option>
+                                <option value="3">Vegano</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-4">
+                            <select id="cboActividad" class="form-control">
+                                <option value="0" class="hidden" selected disabled>Defina su Nivel de Actividad</option>
+                                <option value="1">Hago muchos ejercicios</option>
+                                <option value="2">A veces salgo a caminar / correr</option>
+                                <option value="3">No hago ejercicios</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-4">
+                            <select id="cboObjetivo" class="form-control">
+                                <option value="0" class="hidden" selected disabled>Mi objetivo es</option>
+                                <option value="1">Bajar de peso</option>
+                                <option value="2">Ganar musculatura</option>
+                                <option value="3">Vivir saludable</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row mb-4">
+                        <div class="col-xl-12">
+                            <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#registrarModal">Registrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="modal fade" id="registrarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¿Está seguro que desea registrar sus preferencias?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                <a class="btn btn-primary" href="#" onclick="javascript: fn_Registrar();">Registrar</a>
+            </div>
+        </div>
+    </div>
+</div>
