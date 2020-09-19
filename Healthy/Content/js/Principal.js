@@ -438,6 +438,7 @@ function fn_Registrar() {
         contentType: "application/json",
         success: function (data) {
             alert("Mensaje enviado.");
+            $('#mensajeriaModal').modal('toggle');
             //window.location.reload();
         },
         error: function (e) {
