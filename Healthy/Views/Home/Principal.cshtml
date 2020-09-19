@@ -13,7 +13,246 @@
     .collapse-content .fa.fa-share-alt:hover {
         color: #0d47a1 !important;
     }
+
+    * {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+#grad1 {
+    background-color: skyblue;
+    background-image: linear-gradient(120deg, skyblue, #4e73df);
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#msform fieldset .form-card {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px 30px 40px;
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 3% 20px 3%;
+    position: relative
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #9E9E9E
+}
+
+#msform input,
+#msform textarea {
+    padding: 0px 8px 4px 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 100px;
+    background: skyblue;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #000000
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 25%;
+    float: left;
+    position: relative
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f023"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f09d"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: skyblue
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px
+}
+
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 104;
+    border-radius: 0;
+    background: lightblue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px
+}
+
+.radio:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3)
+}
+
+.radio.selected {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1)
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
 </style>
+<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+<link rel="stylesheet" type="text/css" href="assets/css/demo.css">
 
 <script src="~/Scripts/jquery-1.10.2.js"></script>
 <script src="~/Content/js/Principal.js"></script>
@@ -21,27 +260,153 @@
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Mi Dieta Semanal</h1>
+    <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#pagarModal">Comprar mi dieta</button>
+    <button type="button" class="btn btn-outline-primary float-right" data-toggle="modal" data-target="#mensajeriaModal">Consulta personalizada</button>
 </div>
 
-<!-- Content Row -->
-<div id="dvDias" class="row">
+<div class="modal fade" id="mensajeriaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="personal-information">
+                    <h3>Consulta Personalizada</h3>
+                </div> <!-- end of personal-information -->
+                <button class="close" type="button" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Titulo de mensaje:</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Digita un titulo que describa tu consulta">
+                </div>
 
-    <!-- Earnings (Monthly) Card Example -->
-    <div id="dvDia_0" class="col-xl-1-5 col-md-6 mb-4">
-        <div role="button" class="card border-left-gray shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Lunes</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">24/08</div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fas fa-check-circle fa-2x text-gray-300"></i>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Mensaje:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Redacta tu consulta de forma breve y consisa"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Numero de contacto:</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digita tu numero de celular">
+                </div>
+                <div style="margin-left: auto;">
+                    <button class="btn btn-primary" onclick="javascript: fn_Registrar();">Enviar Mensaje</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="pagarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="personal-information">
+                    <h4>Escoja su mejor opción</h4>
+                </div> <!-- end of personal-information -->
+                <button class="close" type="button" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- MultiStep Form -->
+                <div class="container-fluid" id="grad1">
+                    <div class="row justify-content-center mt-0">
+                        
+                            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                                <div class="row">
+                                    <div class="col-md-12 mx-0">
+                                        <form id="msform">
+                                            <!-- progressbar -->
+                                            <ul id="progressbar">
+                                                <li class="active" id="account"><strong>Semana</strong></li>
+                                                <li id="personal"><strong>Tienda</strong></li>
+                                                <li id="payment"><strong>Pago</strong></li>
+                                                <li id="confirm"><strong>Notificación</strong></li>
+                                            </ul> <!-- fieldsets -->
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <div class="row">
+                                                        <input type="checkbox" style="display:inline" value="Lunes" /> <label style="display:inline">Lunes</label>
+                                                    </div>
+                                                    
+                                                    <input type="checkbox" class="left" value="Lunes" /> Lunes
+                                                    <input type="checkbox" class="left" value="Lunes" /> Lunes
+                                                    <input type="checkbox" class="left" value="Lunes" /> Lunes
+                                                    <input type="checkbox" class="left" value="Lunes" /> Lunes
+                                                    <input type="checkbox" class="left" value="Lunes" /> Lunes
+                                                    <input type="checkbox" class="left" value="Lunes" /> Lunes
+                                                </div>
+                                                <input type="button" name="next" class="next action-button" value="Siguiente" />
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">Personal Information</h2> <input type="text" name="fname" placeholder="First Name" /> <input type="text" name="lname" placeholder="Last Name" /> <input type="text" name="phno" placeholder="Contact No." /> <input type="text" name="phno_2" placeholder="Alternate Contact No." />
+                                                </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="next" class="next action-button" value="Next Step" />
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">Payment Information</h2>
+                                                    <div class="radio-group">
+                                                        <div class='radio' data-value="credit"><img src="https://i.imgur.com/XzOzVHZ.jpg" width="200px" height="100px"></div>
+                                                        <div class='radio' data-value="paypal"><img src="https://i.imgur.com/jXjwZlj.jpg" width="200px" height="100px"></div> <br>
+                                                    </div> <label class="pay">Card Holder Name*</label> <input type="text" name="holdername" placeholder="" />
+                                                    <div class="row">
+                                                        <div class="col-9"> <label class="pay">Card Number*</label> <input type="text" name="cardno" placeholder="" /> </div>
+                                                        <div class="col-3"> <label class="pay">CVC*</label> <input type="password" name="cvcpwd" placeholder="***" /> </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-3"> <label class="pay">Expiry Date*</label> </div>
+                                                        <div class="col-9">
+                                                            <select class="list-dt" id="month" name="expmonth">
+                                                                <option selected>Month</option>
+                                                                <option>January</option>
+                                                                <option>February</option>
+                                                                <option>March</option>
+                                                                <option>April</option>
+                                                                <option>May</option>
+                                                                <option>June</option>
+                                                                <option>July</option>
+                                                                <option>August</option>
+                                                                <option>September</option>
+                                                                <option>October</option>
+                                                                <option>November</option>
+                                                                <option>December</option>
+                                                            </select> <select class="list-dt" id="year" name="expyear">
+                                                                <option selected>Year</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Confirm" />
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title text-center">Success !</h2> <br><br>
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>
+                                                    </div> <br><br>
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-7 text-center">
+                                                            <h5>You Have Successfully Signed Up</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Content Row -->
+<div id="dvDias" class="row">
 
     <!-- Earnings (Monthly) Card Example -->
     <div id="dvDia_1" class="col-xl-1-5 col-md-6 mb-4">
@@ -49,8 +414,8 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Martes</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">25/08</div>
+                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Lunes</div>
+                        <div id="fecha_1" class="h5 mb-0 font-weight-bold text-gray-800"></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-check-circle fa-2x text-gray-300"></i>
@@ -66,8 +431,8 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Miércoles</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">26/08</div>
+                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Martes</div>
+                        <div id="fecha_2" class="h5 mb-0 font-weight-bold text-gray-800"></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-check-circle fa-2x text-gray-300"></i>
@@ -83,8 +448,8 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Jueves</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">27/08</div>
+                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Miércoles</div>
+                        <div id="fecha_3" class="h5 mb-0 font-weight-bold text-gray-800"></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-check-circle fa-2x text-gray-300"></i>
@@ -100,8 +465,8 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Viernes</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">28/08</div>
+                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Jueves</div>
+                        <div id="fecha_4" class="h5 mb-0 font-weight-bold text-gray-800"></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-check-circle fa-2x text-gray-300"></i>
@@ -117,8 +482,8 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Sábado</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">29/08</div>
+                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Viernes</div>
+                        <div id="fecha_5" class="h5 mb-0 font-weight-bold text-gray-800"></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-check-circle fa-2x text-gray-300"></i>
@@ -134,8 +499,25 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Sábado</div>
+                        <div id="fecha_6" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-check-circle fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Earnings (Monthly) Card Example -->
+    <div id="dvDia_7" class="col-xl-1-5 col-md-6 mb-4">
+        <div role="button" class="card border-left-gray shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Domingo</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">30/08</div>
+                        <div id="fecha_7" class="h5 mb-0 font-weight-bold text-gray-800"></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-check-circle fa-2x text-gray-300"></i>
@@ -175,7 +557,7 @@
 
                         <!-- Card image -->
                         <div class="view overlay">
-                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg" alt="Card image cap">
+                            <img id="imgDesayuno" class="card-img-top" src="" alt="Card image cap">
                             <a href="#!">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -185,12 +567,12 @@
                         <div class="card-body">
 
                             <!-- Title -->
-                            <h4 class="card-title font-weight-bold"><a>Omelette</a></h4>
+                            <h4 class="card-title font-weight-bold"><a id="nombreDesayuno"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a id="valorDesayuno" style="font-size:small"></a></h4>
                             <!-- Data -->
                             
                             <p class="mb-2">Desayuno</p>
                             <!-- Text -->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p id="descripcionDesayuno" class="card-text"></p>
                             <hr class="my-4">
                             
                             <ul id="desayuno" class="list-unstyled list-inline rating mb-0 float-right">
@@ -201,9 +583,6 @@
                                 <li class="list-inline-item mr-0"><i id="desayunoStar5" role="button" class="fas fa-star amber-text"></i></li>
                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                             </ul>
-                            <!-- Button -->
-                            <a href="#" class="btn btn-flat deep-purple-text p-1 mx-0 mb-0">Button</a>
-
                         </div>
 
                     </div>
@@ -213,7 +592,7 @@
 
                         <!-- Card image -->
                         <div class="view overlay">
-                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg" alt="Card image cap">
+                            <img id="imgAlmuerzo" class="card-img-top" src="" alt="Card image cap">
                             <a href="#!">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -223,12 +602,12 @@
                         <div class="card-body">
 
                             <!-- Title -->
-                            <h4 class="card-title font-weight-bold"><a>Omelette</a></h4>
+                            <h4 class="card-title font-weight-bold"><a id="nombreAlmuerzo"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a id="valorAlmuerzo" style="font-size:small"></a></h4>
                             <!-- Data -->
 
-                            <p class="mb-2">Desayuno</p>
+                            <p class="mb-2">Almuerzo</p>
                             <!-- Text -->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p id="descripcionAlmuerzo" class="card-text"></p>
                             <hr class="my-4">
 
                             <ul id="almuerzo" class="list-unstyled list-inline rating mb-0 float-right">
@@ -239,9 +618,6 @@
                                 <li class="list-inline-item mr-0"><i id="almuerzoStar5" role="button" class="fas fa-star amber-text"></i></li>
                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                             </ul>
-                            <!-- Button -->
-                            <a href="#" class="btn btn-flat deep-purple-text p-1 mx-0 mb-0">Button</a>
-
                         </div>
 
                     </div>
@@ -251,7 +627,7 @@
 
                         <!-- Card image -->
                         <div class="view overlay">
-                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg" alt="Card image cap">
+                            <img id="imgCena" class="card-img-top" src="" alt="Card image cap">
                             <a href="#!">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -261,12 +637,12 @@
                         <div class="card-body">
 
                             <!-- Title -->
-                            <h4 class="card-title font-weight-bold"><a>Omelette</a></h4>
+                            <h4 class="card-title font-weight-bold"><a id="nombreCena"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a id="valorCena" style="font-size:small"></a></h4>
                             <!-- Data -->
 
-                            <p class="mb-2">Desayuno</p>
+                            <p class="mb-2">Cena</p>
                             <!-- Text -->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p id="descripcionCena" class="card-text"></p>
                             <hr class="my-4">
 
                             <ul id="cena" class="list-unstyled list-inline rating mb-0 float-right">
@@ -277,9 +653,6 @@
                                 <li class="list-inline-item mr-0"><i id="cenaStar5" role="button" class="fas fa-star amber-text"></i></li>
                                 <li class="list-inline-item"><p class="text-muted">4.5 (413)</p></li>
                             </ul>
-                            <!-- Button -->
-                            <a href="#" class="btn btn-flat deep-purple-text p-1 mx-0 mb-0">Button</a>
-
                         </div>
 
                     </div>

@@ -30,8 +30,10 @@
                 alert("Credenciales Incorrectas.");
             }
         },
-        error: function (e) {
-            alert('Ocurrió un Error');
+        error: function (xhr, status, error) {
+            debugger;
+            var err = eval("(" + xhr.responseText + ")");
+            alert(err.Message);
         }
     });
 
