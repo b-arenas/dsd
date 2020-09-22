@@ -2138,6 +2138,7 @@
     <Content Include="Views\Home\Bienvenido.cshtml" />
     <Content Include="Views\Home\Preferencias.cshtml" />
     <Content Include="Views\Home\Compras.cshtml" />
+    <Content Include="Views\Home\Avances.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

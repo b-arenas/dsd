@@ -80,6 +80,11 @@ namespace Healthy.Controllers
             return View();
         }
 
+        public ActionResult Avances()
+        {
+            return View();
+        }
+
         public ActionResult Charts()
         {
             return View();

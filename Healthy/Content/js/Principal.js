@@ -62,8 +62,9 @@ $(document).ready(function () {
 
     $("div[id^='dvDia_'] div.h-100").on("click", function () {
         $("#dvSelectedDay h6").text(this.innerText);
+        fn_CargarRecetaDelDia();
 
-        var rmDesayuno = Math.floor((Math.random() * 5) + 1);
+        /*var rmDesayuno = Math.floor((Math.random() * 5) + 1);
         var rmAlmuerzo = Math.floor((Math.random() * 5) + 1);
         var rmCena = Math.floor((Math.random() * 5) + 1);
 
@@ -73,7 +74,7 @@ $(document).ready(function () {
 
         $("#imgDesayuno").attr("src", rutaDesayuno);
         $("#imgAlmuerzo").attr("src", rutaAlmuerzo);
-        $("#imgCena").attr("src", rutaCena);
+        $("#imgCena").attr("src", rutaCena);*/
     });
 
     $("ul#desayuno .fa-star").mouseover(function () {

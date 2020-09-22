@@ -26,6 +26,7 @@ html {
 #grad1 {
     background-color: skyblue;
     background-image: linear-gradient(120deg, skyblue, #4e73df);
+    width:100%;
 }
 
 #msform {
@@ -143,7 +144,8 @@ select.list-dt:focus {
     z-index: 0;
     border: none;
     border-radius: 0.5rem;
-    position: relative
+    position: relative;
+    width: 100%
 }
 
 .fs-title {
@@ -174,22 +176,22 @@ select.list-dt:focus {
 
 #progressbar #account:before {
     font-family: FontAwesome;
-    content: "\f023"
+    content: "1"
 }
 
 #progressbar #personal:before {
     font-family: FontAwesome;
-    content: "\f007"
+    content: "2"
 }
 
 #progressbar #payment:before {
     font-family: FontAwesome;
-    content: "\f09d"
+    content: "3"
 }
 
 #progressbar #confirm:before {
     font-family: FontAwesome;
-    content: "\f00c"
+    content: "4"
 }
 
 #progressbar li:before {
@@ -261,10 +263,10 @@ select.list-dt:focus {
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Mi Dieta Semanal</h1>
-    <div style="display:none">
-        <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#pagarModal">Comprar mi dieta</button>
+    <div class="float-right">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pagarModal">Comprar mi dieta</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#mensajeriaModal">Consulta personalizada</button>
     </div>
-    <button type="button" class="btn btn-outline-primary float-right" data-toggle="modal" data-target="#mensajeriaModal">Consulta personalizada</button>
 </div>
 
 <div class="modal fade" id="mensajeriaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -306,7 +308,7 @@ select.list-dt:focus {
         <div class="modal-content">
             <div class="modal-header">
                 <div class="personal-information">
-                    <h4>Escoja su mejor opción</h4>
+                    <h4>Finalice su compra</h4>
                 </div> <!-- end of personal-information -->
                 <button class="close" type="button" data-dismiss="modal" aria-label="Cerrar">
                     <span aria-hidden="true">×</span>
@@ -330,54 +332,112 @@ select.list-dt:focus {
                                             </ul> <!-- fieldsets -->
                                             <fieldset>
                                                 <div class="form-card">
-                                                    <div class="row">
-                                                        <input type="checkbox" style="display:inline" value="Lunes" /> <label style="display:inline">Lunes</label>
+                                                    <div class="d-sm-flex align-items-center">
+                                                        <input type="checkbox" class="left" value="1" style="width: 50px" />
+                                                        <label style="padding-bottom:10px">Lunes</label>
                                                     </div>
-                                                    
-                                                    <input type="checkbox" class="left" value="Lunes" /> Lunes
-                                                    <input type="checkbox" class="left" value="Lunes" /> Lunes
-                                                    <input type="checkbox" class="left" value="Lunes" /> Lunes
-                                                    <input type="checkbox" class="left" value="Lunes" /> Lunes
-                                                    <input type="checkbox" class="left" value="Lunes" /> Lunes
-                                                    <input type="checkbox" class="left" value="Lunes" /> Lunes
+                                                    <div class="d-sm-flex align-items-center">
+                                                        <input type="checkbox" class="left" value="2" style="width: 50px" />
+                                                        <label style="padding-bottom:10px">Martes</label>
+                                                    </div>
+                                                    <div class="d-sm-flex align-items-center">
+                                                        <input type="checkbox" class="left" value="3" style="width: 50px" />
+                                                        <label style="padding-bottom:10px">Miércoles</label>
+                                                    </div>
+                                                    <div class="d-sm-flex align-items-center">
+                                                        <input type="checkbox" class="left" value="4" style="width: 50px" />
+                                                        <label style="padding-bottom:10px">Jueves</label>
+                                                    </div>
+                                                    <div class="d-sm-flex align-items-center">
+                                                        <input type="checkbox" class="left" value="5" style="width: 50px" />
+                                                        <label style="padding-bottom:10px">Viernes</label>
+                                                    </div>
+                                                    <div class="d-sm-flex align-items-center">
+                                                        <input type="checkbox" class="left" value="6" style="width: 50px" />
+                                                        <label style="padding-bottom:10px">Sábado</label>
+                                                    </div>
+                                                    <div class="d-sm-flex align-items-center">
+                                                        <input type="checkbox" class="left" value="7" style="width: 50px" />
+                                                        <label style="padding-bottom:10px">Domingo</label>
+                                                    </div>
                                                 </div>
                                                 <input type="button" name="next" class="next action-button" value="Siguiente" />
                                             </fieldset>
                                             <fieldset>
                                                 <div class="form-card">
-                                                    <h2 class="fs-title">Personal Information</h2> <input type="text" name="fname" placeholder="First Name" /> <input type="text" name="lname" placeholder="Last Name" /> <input type="text" name="phno" placeholder="Contact No." /> <input type="text" name="phno_2" placeholder="Alternate Contact No." />
-                                                </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="next" class="next action-button" value="Next Step" />
+                                                    <table class="table table-bordered" id="dataTable" width="95%" cellspacing="0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Dias</th>
+                                                                <th>Plaza Vea</th>
+                                                                <th>Tottus</th>
+                                                                <th>Wong</th>
+                                                            </tr>
+                                                        <thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Lunes</td>
+                                                                <td>S/18.99</td>
+                                                                <td>S/15.00</td>
+                                                                <td>S/20.99</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Martes</td>
+                                                                <td>S/18.99</td>
+                                                                <td>S/15.00</td>
+                                                                <td>S/20.99</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Miercoles</td>
+                                                                <td>S/18.99</td>
+                                                                <td>S/15.00</td>
+                                                                <td>S/20.99</td>
+                                                            </tr>
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td><input type="radio" name="rdTienda" /></td>
+                                                                <td><input type="radio" name="rdTienda" /></td>
+                                                                <td><input type="radio" name="rdTienda" /></td>
+                                                            </tr>
+                                                        </tfoot>
+                                                    </table>
+                                                </div> 
+                                                <input type="button" name="previous" class="previous action-button-previous" value="Anterior" />
+                                                <input type="button" name="next" class="next action-button" value="Siguiente" />
                                             </fieldset>
                                             <fieldset>
                                                 <div class="form-card">
                                                     <h2 class="fs-title">Payment Information</h2>
-                                                    <div class="radio-group">
-                                                        <div class='radio' data-value="credit"><img src="https://i.imgur.com/XzOzVHZ.jpg" width="200px" height="100px"></div>
-                                                        <div class='radio' data-value="paypal"><img src="https://i.imgur.com/jXjwZlj.jpg" width="200px" height="100px"></div> <br>
-                                                    </div> <label class="pay">Card Holder Name*</label> <input type="text" name="holdername" placeholder="" />
+                                                    <label class="pay">Nombre en Tarjeta*</label> <input type="text" name="holdername" placeholder="" maxlength="" />
                                                     <div class="row">
-                                                        <div class="col-9"> <label class="pay">Card Number*</label> <input type="text" name="cardno" placeholder="" /> </div>
-                                                        <div class="col-3"> <label class="pay">CVC*</label> <input type="password" name="cvcpwd" placeholder="***" /> </div>
+                                                        <div class="col-9"> <label class="pay">Número de Tarjeta*</label> <input type="text" name="cardno" placeholder="" maxlength="16" /> </div>
+                                                        <div class="col-3"> <label class="pay">CVC*</label> <input type="password" name="cvcpwd" placeholder="***" maxlength="3" /> </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-3"> <label class="pay">Expiry Date*</label> </div>
+                                                        <div class="col-3"> <label class="pay">Fecha de Expiración*</label> </div>
                                                         <div class="col-9">
                                                             <select class="list-dt" id="month" name="expmonth">
-                                                                <option selected>Month</option>
-                                                                <option>January</option>
-                                                                <option>February</option>
-                                                                <option>March</option>
-                                                                <option>April</option>
-                                                                <option>May</option>
-                                                                <option>June</option>
-                                                                <option>July</option>
-                                                                <option>August</option>
-                                                                <option>September</option>
-                                                                <option>October</option>
-                                                                <option>November</option>
-                                                                <option>December</option>
+                                                                <option selected>Mes</option>
+                                                                <option>Enero</option>
+                                                                <option>Febrero</option>
+                                                                <option>Marzo</option>
+                                                                <option>Abril</option>
+                                                                <option>Mayo</option>
+                                                                <option>Junio</option>
+                                                                <option>Julio</option>
+                                                                <option>Agosto</option>
+                                                                <option>Setiembre</option>
+                                                                <option>Octubre</option>
+                                                                <option>Noviembre</option>
+                                                                <option>Diciembre</option>
                                                             </select> <select class="list-dt" id="year" name="expyear">
-                                                                <option selected>Year</option>
+                                                                <option selected>2020</option>
+                                                                <option>2021</option>
+                                                                <option>2022</option>
+                                                                <option>2023</option>
+                                                                <option>2024</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -385,13 +445,13 @@ select.list-dt:focus {
                                             </fieldset>
                                             <fieldset>
                                                 <div class="form-card">
-                                                    <h2 class="fs-title text-center">Success !</h2> <br><br>
+                                                    <h2 class="fs-title text-center">Éxito</h2> <br><br>
                                                     <div class="row justify-content-center">
                                                         <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>
                                                     </div> <br><br>
                                                     <div class="row justify-content-center">
                                                         <div class="col-7 text-center">
-                                                            <h5>You Have Successfully Signed Up</h5>
+                                                            <h5>La compra se realizó satisfactoriamente</h5>
                                                         </div>
                                                     </div>
                                                 </div>
