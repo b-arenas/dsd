@@ -230,6 +230,7 @@
     <Content Include="Content\css\styles.css" />
     <Content Include="Content\css\stylesAbout.css" />
     <Content Include="Content\css\stylesContacto.css" />
+    <Content Include="Content\css\stylesPrincipal.css" />
     <Content Include="Content\img\almuerzo\image1.jpeg" />
     <Content Include="Content\img\almuerzo\image2.jpeg" />
     <Content Include="Content\img\almuerzo\image3.jpeg" />
@@ -247,6 +248,7 @@
     <Content Include="Content\img\desayuno\image5.jpeg" />
     <Content Include="Content\img\undraw_posting_photo.svg" />
     <Content Include="Content\js\card.js" />
+    <Content Include="Content\js\Compras.js" />
     <Content Include="Content\js\demo\chart-area-demo.js" />
     <Content Include="Content\js\demo\chart-bar-demo.js" />
     <Content Include="Content\js\demo\chart-pie-demo.js" />
@@ -255,6 +257,7 @@
     <Content Include="Content\js\LayoutPrincipal.js" />
     <Content Include="Content\js\Login.js" />
     <Content Include="Content\js\Principal.js" />
+    <Content Include="Content\js\Profile.js" />
     <Content Include="Content\js\Register.js" />
     <Content Include="Content\js\sb-admin-2.js" />
     <Content Include="Content\js\sb-admin-2.min.js" />
@@ -2139,6 +2142,7 @@
     <Content Include="Views\Home\Preferencias.cshtml" />
     <Content Include="Views\Home\Compras.cshtml" />
     <Content Include="Views\Home\Avances.cshtml" />
+    <Content Include="Views\Account\Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

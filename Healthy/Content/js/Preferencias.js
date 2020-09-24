@@ -12,9 +12,10 @@ $(document).ready(function () {
             $("#iptApellidos").val(oUser.lastname);
             $("#iptCorreo").val(oUser.email);
 
+            if (data.code != null) {
+                
+                sessionStorage.setItem("preferencias", 1);
 
-            if (data.userCode != null) {
-                debugger;
                 // convert the object to JSON string
                 $("#iptTelefono").val(data.numero_celular);
                 $("#iptPeso").val(data.peso);
@@ -26,6 +27,9 @@ $(document).ready(function () {
                 $("#cboRegimen").val(data.restricciones);
                 $("#cboActividad").val(data.frecuencia_actividad);
                 $("#cboObjetivo").val(data.objetivo);
+            } else {
+                debugger;
+                sessionStorage.setItem("preferencias", 0);
             }
         },
         error: function (e) {
@@ -40,8 +44,6 @@ function fn_Registrar() {
 
     if (!oPreferencias)
         return false;
-
-    var user_cod = 1;
 
     $.ajax({
         type: "POST",
@@ -63,7 +65,9 @@ function fn_Registrar() {
 }
 
 function fn_ValidarRegistro() {
+
     var oPreferencias = {
+        "code": oUser.code,
         "numero_celular": $.trim($("#iptTelefono").val()),
         "peso": $.trim($("#iptPeso").val()),
         "talla": $.trim($("#iptTalla").val()),
@@ -72,7 +76,9 @@ function fn_ValidarRegistro() {
         "restricciones": $.trim($("#cboRegimen").val()),
         "frecuencia_actividad": $.trim($("#cboActividad").val()),
         "objetivo": $.trim($("#cboObjetivo").val()),
-        "userCode": oUser.code
+        "user":{
+            "code": oUser.code
+        }
     };
 
     if (oPreferencias.numero_celular == "" ||

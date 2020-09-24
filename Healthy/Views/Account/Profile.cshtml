@@ -1,0 +1,72 @@
+﻿@{
+    Layout = "~/Views/Home/_LayoutPrincipal.cshtml";
+}
+
+<script src="~/Content/js/Profile.js"></script>
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Mis Preferencias</h1>
+</div>
+
+<form class="col-xl-10 align-self-center">
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <h5 class="register-heading">Datos Personales</h5>
+            <div class="row register-form">
+                <div class="col-md-12">
+                    <div class="row mb-4">
+                        <div class="col-xl-6">
+                            <input id="iptNombres" type="text" class="form-control" placeholder="Nombres" value="" disabled />
+                        </div>
+                        <div class="col-xl-6">
+                            <input id="iptApellidos" type="text" class="form-control" placeholder="Apellidos" value="" disabled />
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-xl-6">
+                            <input id="iptCorreo" type="email" class="form-control" placeholder="Correo Electrónico" value="" disabled />
+                        </div>
+                        <div class="col-xl-6">
+                            <input id="iptTelefono" type="text" class="form-control" placeholder="Teléfono" value="" disabled />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <h5 class="register-heading">Datos de Membresía</h5>
+            <div class="row register-form">
+                <div class="col-md-12">
+                    <div class="row mb-4">
+                        <div class="col-xl-3">
+                            Desde
+                            <input id="iptDesde" type="text" class="form-control" value="26/09/2020" />
+                        </div>
+                        <div class="col-xl-3">
+                            Hasta
+                            <input id="iptHasta" type="text" class="form-control" value="Siempre" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="modal fade" id="registrarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¿Está seguro que desea registrar sus preferencias?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                <a class="btn btn-primary" href="#" onclick="javascript: fn_Registrar();">Registrar</a>
+            </div>
+        </div>
+    </div>
+</div>
